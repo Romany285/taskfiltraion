@@ -1,0 +1,19 @@
+<section class="text-center h-100">
+  <h2 class="main-text-size main-color py-3">RECIPES</h2>
+  <div class="row m-auto">
+    <div class="col-4" *ngFor="let item of products | slice : 0 : 3 , index as index">
+      <div class="product">
+        <div class="image">
+          <img  [src]="products[index].strMealThumb" [alt]="products[index].idMeal"  >
+        </div>
+
+        <div class="p-3">
+          <h6 class="main-color" >{{ products[index].strMeal }}</h6>
+          <p  >Lorem Ipsum is simply dumy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <button class="main-button my-4">CONTACT US</button>
+</section>

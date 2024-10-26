@@ -1,0 +1,30 @@
+$main-color:#C98A40;
+.bg-main{
+  background-color: $main-color;
+}
+.main-color{
+  color: $main-color;
+}
+.main-text-size{
+  font-size: 120px;
+  font-weight: 800;
+}
+.main-button{
+  font-size: 14px;
+  font-weight: 500;
+  background-color:   #FDBA10;
+  border: #FDBA10 solid 1px;
+  border-radius: 20px;
+  padding: 9px 28px;
+  color: white;
+  transition: all 0.4s;
+}
+.main-button:hover{
+
+  background-color:   rgb(197, 142, 2);
+
+}
+.bg-page{
+  background-image: url('./assets/image/MaskGroup.png');
+  background-size: cover;
+}

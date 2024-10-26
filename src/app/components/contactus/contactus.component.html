@@ -1,0 +1,38 @@
+<section class="vh-100 text-center">
+  <h2 class="main-text-size main-color   py-3">CONTACT US</h2>
+  <form  (ngSubmit)="handleForm()" [formGroup]="contactForm">
+    <div class="row w-50 m-auto">
+      <div class="col-6">
+        <div>
+          <input #nameInput type="text" class="form-control input" placeholder="Full Name" formControlName="name">
+          <div class="alert alert-danger p-1 font-md" *ngIf="contactForm.get('name')?.errors &&( contactForm.get('name')?.touched || nameInput.value.length > 0)">
+            <p class="mb-0  " *ngIf="contactForm.get('name')?.getError('required')">Name is Required</p>
+            <p class="mb-0 " *ngIf="contactForm.get('name')?.getError('minlength')">Name Min Length 3</p>
+            <p class="mb-0  " *ngIf="contactForm.get('name')?.getError('maxlength')">Name max Length 3</p>
+        </div>
+        </div>
+        <div>
+          <input #emailInput type="email" class="form-control input" placeholder="Email" formControlName="email">
+          <div class="alert alert-danger p-1 font-md" *ngIf="contactForm.get('email')?.errors &&( contactForm.get('email')?.touched || emailInput.value.length > 0)">
+            <p class="mb-0  " *ngIf="contactForm.get('email')?.getError('required')">Email is Required</p>
+            <p class="mb-0  " *ngIf="contactForm.get('email')?.getError('email')">Email invalid</p>
+        </div>
+        </div>
+        <div>
+          <input #phoneInput type="tel" class="form-control input" placeholder="Phone Number" formControlName="phone">
+          <div class="alert alert-danger p-1 font-md" *ngIf="contactForm.get('phone')?.errors &&( contactForm.get('phone')?.touched || phoneInput.value.length > 0)">
+            <p class="mb-0  " *ngIf="contactForm.get('phone')?.getError('required')">Phone is Required</p>
+            <p class="mb-0 " *ngIf="contactForm.get('phone')?.getError('pattern')">accept only egypt phone numbers</p>
+        </div>
+        </div>
+        <button [disabled]="contactForm.invalid" class="btn  ">SEND</button>
+      </div>
+      <div class="col-6 text-start ps-5 d-flex flex-column justify-content-center">
+        <div  class="mb-4"><i class="fa-solid fa-envelope main-color me-3  "></i>upskilling.eg1&#64;gmail.com</div>
+        <div   class="mb-4"><i class="fa-solid fa-phone main-color me-3  "></i>+20 115 493 2137</div>
+      </div>
+    </div>
+
+  </form>
+  <div class="footer"></div>
+</section>

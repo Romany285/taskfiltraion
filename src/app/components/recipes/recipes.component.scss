@@ -1,0 +1,28 @@
+
+.row{
+  width: 60%;
+  .product{
+    border: #FFD8AB solid 1px;
+    text-align: start;
+    border-radius: 15px;
+    overflow:  hidden;
+    img{
+      width: 100%;
+      transition: all 0.6s;
+      border-radius: 5px 5px 5px 5px;
+    }
+    p{
+      font-size: 12px;
+
+    }
+    &:hover{
+      img{
+        transform: scale(115%);
+      }
+    }
+    .image{
+     overflow: hidden;
+    }
+  }
+}
+
